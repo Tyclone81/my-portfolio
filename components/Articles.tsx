@@ -1,86 +1,108 @@
-import { ExternalLink, BookOpen, Clock, Calendar } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
+import Cover from "@/components/Cover";
+
+interface Article {
+  title: string;
+  desc: string;
+  url: string;
+  date: string;
+  tags: string[];
+  image: string;
+  imageAlt: string;
+}
+
+// Newest first. The remaining posts live on DEV.to (see the link at the top of the section).
+const articles: Article[] = [
+  {
+    title: "The Thin Line Between Vibe Coding and Viable Coding",
+    desc: "Notes from a Zone01 Kisumu conference on AI and software engineering. Code is getting cheaper to write, so the real work has moved to structural judgment, architecture, and knowing what not to build.",
+    url: "https://dev.to/tyclone81/the-thin-line-between-vibe-coding-and-viable-coding-1mal",
+    date: "Sep 2026",
+    tags: ["SoftwareEngineering", "AI"],
+    image: "/images/articles/thin-line.svg",
+    imageAlt: "Illustration splitting loose vibe coding from structured viable coding",
+  },
+  {
+    title: "ASCII-Art Experiment to Production-Grade: Building a Live Web Platform for INKA LittUp",
+    desc: "How one assignment became the foundation for a real client site: fixing Go's catch-all routing so bad paths return 404, wiring up Formspree and WhatsApp, and shipping with continuous deploys on Render.",
+    url: "https://dev.to/tyclone81/ascii-art-experiment-to-production-grade-building-a-live-web-platform-for-inka-littup-585d",
+    date: "Jul 2026",
+    tags: ["Go", "WebDev"],
+    image: "/images/projects/inka-littup.svg",
+    imageAlt: "Preview of the INKA LittUp website",
+  },
+  {
+    title: "From the Lab to the Loop; Starting Again!",
+    desc: "Why I left science for software development: six months of self-doubt, an intense Zone01 Kisumu selection, and the leap of faith to start over.",
+    url: "https://dev.to/tyclone81/from-the-lab-to-the-loop-starting-again-4hd5",
+    date: "Jun 2026",
+    tags: ["Beginners", "Career"],
+    image: "/images/articles/lab-to-loop.svg",
+    imageAlt: "Illustration of a lab flask turning into a code loop",
+  },
+];
+
+// The tilt. Desktop only: on phones the cards sit flat in a single column.
+const TILT = "md:[transform:skewY(-22deg)]";
+const TILT_HOVER = "md:hover:[transform:skewY(-22deg)_translateY(-20px)]";
 
 export default function Articles() {
-  const articles = [
-    {
-      title: "The Thin Line Between Vibe Coding and Viable Coding",
-      desc: "Documenting the evolution of modern software engineering. While AI can quickly generate lines of code, the real challenge for engineers has shifted to structural judgment, architecture, and knowing what not to build.",
-      url: "https://dev.to/tyclone81/the-thin-line-between-vibe-coding-and-viable-coding-1mal",
-      platform: "DEV Community",
-      readTime: "3 min read",
-      date: "September 2026",
-      tags: ["#SoftwareEngineering", "#SystemArchitecture", "#AI", "#ViableCoding"],
-    },
-  ];
-
   return (
-    <section id="articles" className="py-24 bg-white border-t border-stone-200/80">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <p className="text-orange-600 font-mono text-sm tracking-wider uppercase mb-2">03. Insights &amp; Writing</p>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-stone-900 tracking-tight">
-            Technical Writing
+    <section id="articles" className="bg-orange-500 border-t border-stone-200/80 overflow-hidden">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-28">
+        {/* Header */}
+        <div className="flex flex-col items-center text-center mb-16 md:mb-24">
+          <a
+            href="https://dev.to/tyclone81"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full border border-stone-900/40 text-stone-900 font-mono text-xs transition-colors hover:bg-stone-900 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-stone-900 focus-visible:ring-offset-2 focus-visible:ring-offset-orange-500"
+          >
+            see more on dev.to
+            <ArrowUpRight className="w-3.5 h-3.5" />
+          </a>
+          <h2 className="mt-4 text-4xl sm:text-5xl font-extrabold text-stone-900 tracking-tight">
+             Articles
           </h2>
-          <p className="text-stone-600 mt-3 text-base">
-            Exploring software architecture, engineering paradigms, and the evolving developer ecosystem.
+          <p className="mt-3 text-stone-900/80 text-base max-w-md">
+            What I learn while building, written up on DEV.to.
           </p>
         </div>
 
-        {/* Article Cards */}
-        <div className="space-y-6">
-          {articles.map((article, idx) => (
+        {/* Tilted cards: the whole card is the link */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-10">
+          {articles.map((article) => (
             <a
-              key={idx}
+              key={article.url}
               href={article.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="block bg-[#FAF8F5] border border-stone-200 rounded-2xl p-6 sm:p-8 hover:border-orange-400 hover:shadow-lg transition-all duration-300 group"
+              className={`group relative flex flex-col min-h-[26rem] bg-stone-900 text-white rounded-3xl p-6 shadow-[0_10px_0_-4px_rgba(28,25,23,0.35)] transition-[transform,box-shadow] duration-300 ease-out ${TILT} ${TILT_HOVER} md:hover:shadow-[-14px_22px_30px_rgba(28,25,23,0.45)] motion-reduce:transition-none motion-reduce:hover:transform-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-orange-500`}
             >
-              <div className="flex flex-col gap-4">
-                <div className="flex flex-wrap items-center justify-between gap-2 text-xs font-mono text-stone-500">
-                  <div className="flex items-center gap-3">
-                    <span className="inline-flex items-center gap-1 text-orange-700 font-semibold bg-orange-100/70 px-2.5 py-0.5 rounded-full border border-orange-200">
-                      <BookOpen className="w-3.5 h-3.5 text-orange-600" />
-                      {article.platform}
-                    </span>
-                    <span className="flex items-center gap-1 text-stone-500">
-                      <Calendar className="w-3.5 h-3.5 text-stone-400" />
-                      {article.date}
-                    </span>
-                  </div>
-                  <span className="flex items-center gap-1 text-stone-500">
-                    <Clock className="w-3.5 h-3.5 text-stone-400" />
-                    {article.readTime}
-                  </span>
-                </div>
+              {/* Arrow badge: fills in on hover */}
+              <span
+                aria-hidden="true"
+                className="absolute top-5 right-5 flex items-center justify-center w-9 h-9 rounded-full border border-orange-400/70 text-orange-400 transition-colors duration-300 group-hover:bg-orange-500 group-hover:border-orange-500 group-hover:text-stone-900"
+              >
+                <ArrowUpRight className="w-4 h-4" />
+              </span>
 
-                <div>
-                  <h3 className="text-xl sm:text-2xl font-bold text-stone-900 group-hover:text-orange-600 transition-colors mb-3">
-                    {article.title}
-                  </h3>
-                  <p className="text-stone-600 text-sm sm:text-base leading-relaxed mb-4">
-                    {article.desc}
-                  </p>
-                </div>
+              <p className="font-mono text-xs text-orange-400 pr-12 mb-3">
+                {article.tags.join(" / ")}
+              </p>
 
-                <div className="flex flex-wrap items-center justify-between gap-4 pt-4 border-t border-stone-200">
-                  <div className="flex flex-wrap gap-2">
-                    {article.tags.map((tag, tIdx) => (
-                      <span
-                        key={tIdx}
-                        className="text-xs text-stone-500 font-mono bg-white px-2.5 py-0.5 rounded border border-stone-200"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
+              <h3 className="text-lg font-bold leading-snug pr-8 mb-3">{article.title}</h3>
 
-                  <span className="text-orange-600 font-semibold text-sm inline-flex items-center gap-1.5 group-hover:translate-x-1 transition-transform">
-                    <span>Read on DEV.to</span>
-                    <ExternalLink className="w-4 h-4" />
-                  </span>
+              {/* Description appears on hover (always visible on touch / no-hover devices) */}
+              <p className="text-sm text-stone-300 leading-relaxed line-clamp-4 transition-opacity duration-300 [@media(hover:hover)]:opacity-0 [@media(hover:hover)]:group-hover:opacity-100 [@media(hover:hover)]:group-focus-visible:opacity-100 motion-reduce:transition-none">
+                {article.desc}
+              </p>
+
+              <div className="mt-auto pt-5">
+                <div className="rounded-xl overflow-hidden border border-white/10 mb-3">
+                  <Cover src={article.image} alt={article.imageAlt} ratio="aspect-[16/9]" />
                 </div>
+                <p className="font-mono text-xs text-stone-400">{article.date}</p>
               </div>
             </a>
           ))}
