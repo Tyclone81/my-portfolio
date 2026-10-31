@@ -29,7 +29,7 @@ export default function About() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Heading */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <p className="text-orange-600 font-mono text-sm tracking-wider uppercase mb-2">01. Background & Philosophy</p>
+          <p className="text-orange-600 font-mono text-sm tracking-wider uppercase mb-2">Background & Philosophy</p>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-stone-900 tracking-tight">
             About Me
           </h2>

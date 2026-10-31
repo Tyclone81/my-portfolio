@@ -46,9 +46,9 @@ export default function Contact() {
     <section id="contact" className="py-24 bg-white border-t border-stone-200/80">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <p className="text-orange-600 font-mono text-sm tracking-wider uppercase mb-2">05. Initiate Connection</p>
+          <p className="text-orange-600 font-mono text-sm tracking-wider uppercase mb-2">Get in Touch</p>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-stone-900 tracking-tight">
-            Let&apos;s Build Together
+            Let&apos;s Collaborate
           </h2>
           <p className="text-stone-600 mt-3 text-base">
             Have an engineering challenge, backend infrastructure to architect, or an open engineering role? Reach out through any channel below.

@@ -32,9 +32,9 @@ export default function Hobbies() {
     <section id="hobbies" className="py-24 bg-[#FAF8F5] border-t border-stone-200/80">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <p className="text-orange-600 font-mono text-sm tracking-wider uppercase mb-2">04. Personal Pursuits</p>
+          <p className="text-orange-600 font-mono text-sm tracking-wider uppercase mb-2">Outside the Codebase</p>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-stone-900 tracking-tight">
-            Out of Office
+            Personal Pursuits
           </h2>
           <p className="text-stone-600 mt-3 text-base">
             How physical crafting, systems exploration, and sports shape my engineering perspective.
