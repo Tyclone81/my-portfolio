@@ -14,11 +14,29 @@ export const metadata: Metadata = {
     "TypeScript",
   ],
   authors: [{ name: "Victor Ogero" }],
+  icons: {
+    icon: [
+      { url: "/icon.svg", type: "image/svg+xml" },
+      { url: "/favicon.ico", sizes: "any" },
+    ],
+    apple: [
+      { url: "/icon.svg", type: "image/svg+xml" },
+    ],
+    shortcut: ["/icon.svg"],
+  },
   openGraph: {
     title: "Victor Ogero | Full-Stack & Systems Software Engineer",
     description: "Explore backend architectures, concurrent TCP systems, and production web platforms built by Victor Ogero.",
     type: "website",
     locale: "en_US",
+    images: [
+      {
+        url: "/icon.svg",
+        width: 512,
+        height: 512,
+        alt: "VO. - Victor Ogero",
+      },
+    ],
   },
 };
 

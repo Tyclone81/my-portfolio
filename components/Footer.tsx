@@ -33,8 +33,10 @@ export default function Footer() {
         
         {/* Top Monogram */}
         <div className="mb-6 flex justify-center">
-          <Link href="/" className="font-black text-3xl tracking-tighter text-stone-900 hover:text-amber-800 transition-colors">
-            VO<span className="text-amber-600">.</span>
+          <Link href="/" className="group inline-flex items-center gap-2.5">
+            <span className="w-10 h-10 rounded-xl bg-gradient-to-br from-orange-500 to-orange-600 text-[#FAF7F2] font-black text-base tracking-tight flex items-center justify-center shadow-md shadow-orange-500/20 group-hover:scale-105 transition-transform duration-200">
+              VO<span className="text-amber-200">.</span>
+            </span>
           </Link>
         </div>
 

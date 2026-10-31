@@ -26,15 +26,20 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           
-          {/* Logo / Monogram: VO. with role subtitle */}
+          {/* Logo / Monogram: VO. wrapped in the predominant brand color */}
           <div className="flex-shrink-0">
-            <Link href="/" className="group flex flex-col">
-              <span className="font-black text-2xl tracking-tighter text-stone-900 group-hover:text-amber-800 transition-colors flex items-center">
-                VO<span className="text-amber-600">.</span>
+            <Link href="/" className="group flex items-center gap-2.5">
+              <span className="w-9 h-9 rounded-xl bg-gradient-to-br from-orange-500 to-orange-600 text-[#FAF7F2] font-black text-sm tracking-tight flex items-center justify-center shadow-sm shadow-orange-500/25 group-hover:scale-105 transition-transform duration-200">
+                VO<span className="text-amber-200">.</span>
               </span>
-              <span className="text-[10px] tracking-widest uppercase font-mono text-stone-600 -mt-1">
-                software engineer
-              </span>
+              <div className="flex flex-col">
+                <span className="font-bold text-base tracking-tight text-stone-900 group-hover:text-orange-600 transition-colors leading-tight">
+                  Victor Ogero
+                </span>
+                <span className="text-[10px] tracking-widest uppercase font-mono text-stone-500 -mt-0.5">
+                  software engineer
+                </span>
+              </div>
             </Link>
           </div>
 
