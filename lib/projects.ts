@@ -28,7 +28,7 @@ export const projects: Project[] = [
     stack: ["Go", "HTML5", "CSS3", "Formspree", "WhatsApp API", "Render"],
     learned:
       "Strict route handling in Go (real 404s instead of catch-all 200s), serving static assets, third-party API integration, and continuous deploys from GitHub to Render.",
-    image: "/images/projects/inka-littup.svg",
+    image: "/images/projects/inka-littup.jpg",
     imageAlt: "Preview of the INKA LittUp website",
     liveUrl: "https://inkalittup.onrender.com/",
     githubUrl: "https://github.com/Tyclone81/LittUp",
@@ -48,8 +48,8 @@ export const projects: Project[] = [
       "A real estate escrow web app using the Bitcoin Lightning Network for low-latency, trust-minimized multi-signature escrow workflows.",
     // TODO: add `role` and `learned`.
     stack: ["React", "TypeScript", "FastAPI", "WebLN", "Bitcoin L2"],
-    image: "/images/projects/propersats.svg",
-    imageAlt: "Illustration of a house secured by a lock and Lightning bolts",
+    image: "/images/projects/propersats.jpg",
+    imageAlt: "Preview of ProperSats mobile-first Bitcoin land acquisition platform",
     githubUrl: "https://github.com/hajisml/propersats",
   },
   {
@@ -75,8 +75,8 @@ export const projects: Project[] = [
     stack: ["Go", "SQLite (CGO)", "Docker", "Bcrypt", "Sessions"],
     learned:
       "Designing a relational schema, building session-based authentication with hashed passwords, and shipping a small Docker image through a multi-stage build.",
-    image: "/images/projects/forum.svg",
-    imageAlt: "Illustration of forum threads backed by a database",
+    image: "/images/projects/forum.jpg",
+    imageAlt: "Preview of Forum, a Reddit-inspired web forum application",
     // TODO: point this at the actual forum repo.
     githubUrl: "https://github.com/Tyclone81",
     highlights: [

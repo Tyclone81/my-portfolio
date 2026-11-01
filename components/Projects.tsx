@@ -52,6 +52,13 @@ export default function Projects() {
                     {String(i + 1).padStart(2, "0")}
                   </span>
                   <h3 className="text-lg sm:text-xl font-bold text-stone-900 truncate group-hover:text-orange-600 transition-colors">
+
+
+
+
+
+
+
                     {project.title}
                   </h3>
                   <span className="hidden sm:inline-block shrink-0 px-2.5 py-0.5 rounded-full bg-orange-50 text-orange-700 border border-orange-200 font-mono text-xs font-semibold">

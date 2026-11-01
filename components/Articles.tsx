@@ -19,8 +19,8 @@ const articles: Article[] = [
     url: "https://dev.to/tyclone81/the-thin-line-between-vibe-coding-and-viable-coding-1mal",
     date: "Sep 2026",
     tags: ["SoftwareEngineering", "AI"],
-    image: "/images/articles/thin-line.svg",
-    imageAlt: "Illustration splitting loose vibe coding from structured viable coding",
+    image: "/images/projects/thin-line.png",
+    imageAlt: "The Thin Line Between Vibe Coding and Viable Coding: Crossing the chasm to architecture and deployment",
   },
   {
     title: "ASCII-Art Experiment to Production-Grade: Building a Live Web Platform for INKA LittUp",
@@ -28,7 +28,7 @@ const articles: Article[] = [
     url: "https://dev.to/tyclone81/ascii-art-experiment-to-production-grade-building-a-live-web-platform-for-inka-littup-585d",
     date: "Jul 2026",
     tags: ["Go", "WebDev"],
-    image: "/images/projects/inka-littup.svg",
+    image: "/images/projects/inka-littup.jpg",
     imageAlt: "Preview of the INKA LittUp website",
   },
   {
@@ -37,8 +37,8 @@ const articles: Article[] = [
     url: "https://dev.to/tyclone81/from-the-lab-to-the-loop-starting-again-4hd5",
     date: "Jun 2026",
     tags: ["Beginners", "Career"],
-    image: "/images/articles/lab-to-loop.svg",
-    imageAlt: "Illustration of a lab flask turning into a code loop",
+    image: "/images/projects/lab-to-loop.jpg",
+    imageAlt: "From the Lab to the Loop: Transitioning from science experiments to automated development loops",
   },
 ];
 

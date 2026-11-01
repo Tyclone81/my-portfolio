@@ -17,7 +17,7 @@ export default function Cover({
   ratio = "aspect-video",
 }: CoverProps) {
   return (
-    <div className={`relative overflow-hidden bg-stone-100 ${ratio} ${className}`}>
+    <div className={`relative overflow-hidden bg-stone-900 ${ratio} ${className}`}>
       <Image
         src={src}
         alt={alt}
