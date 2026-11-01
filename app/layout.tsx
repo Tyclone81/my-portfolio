@@ -2,8 +2,8 @@ import "./globals.css";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Victor Ogero | Full-Stack & Systems Software Engineer",
-  description: "Portfolio of Victor Ogero, Full-Stack & Systems Software Engineer specializing in Go systems architecture, concurrent networks, and scalable web platforms.",
+  title: "Victor Ogero | Full-Stack Software Engineer",
+  description: "Portfolio of Victor Ogero, a full-stack software engineer building web applications and Go backends. Explore selected projects, articles, and work from Zone01 Kisumu.",
   keywords: [
     "Victor Ogero",
     "Software Engineer",
@@ -26,8 +26,8 @@ export const metadata: Metadata = {
     shortcut: ["/favicon.ico?v=2"],
   },
   openGraph: {
-    title: "Victor Ogero | Full-Stack & Systems Software Engineer",
-    description: "Explore backend architectures, concurrent TCP systems, and production web platforms built by Victor Ogero.",
+    title: "Victor Ogero | Full-Stack Software Engineer",
+    description: "Explore web applications and Go backend projects built by Victor Ogero, a full-stack software engineer at Zone01 Kisumu.",
     type: "website",
     locale: "en_US",
     images: [

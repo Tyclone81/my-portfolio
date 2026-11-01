@@ -69,7 +69,7 @@ export default function Footer() {
 
         {/* Copyright & Stack */}
         <p className="text-stone-600 text-xs font-mono">
-          &copy; {currentYear} Victor Ogero &bull; Systems &amp; Full-Stack Software Engineer &bull; Zone01 Kisumu
+          &copy; {currentYear} Victor Ogero &bull; Full-Stack Software Engineer &bull; Zone01 Kisumu
         </p>
       </div>
     </footer>
