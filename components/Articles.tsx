@@ -48,7 +48,7 @@ const TILT_HOVER = "md:hover:[transform:skewY(-22deg)_translateY(-20px)]";
 
 export default function Articles() {
   return (
-    <section id="articles" className="bg-orange-500 border-t border-stone-200/80 overflow-hidden">
+    <section id="articles" className="bg-[#F8EBDD] border-t border-stone-200/80 overflow-hidden">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-28">
         {/* Header */}
         <div className="flex flex-col items-center text-center mb-16 md:mb-24">
@@ -56,7 +56,7 @@ export default function Articles() {
             href="https://dev.to/tyclone81"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full border border-stone-900/40 text-stone-900 font-mono text-xs transition-colors hover:bg-stone-900 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-stone-900 focus-visible:ring-offset-2 focus-visible:ring-offset-orange-500"
+            className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full border border-stone-900/40 text-stone-900 font-mono text-xs transition-colors hover:bg-stone-900 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-stone-900 focus-visible:ring-offset-2 focus-visible:ring-offset-[#F8EBDD]"
           >
             see more on dev.to
             <ArrowUpRight className="w-3.5 h-3.5" />
@@ -77,7 +77,7 @@ export default function Articles() {
               href={article.url}
               target="_blank"
               rel="noopener noreferrer"
-              className={`group relative flex flex-col min-h-[26rem] bg-stone-900 text-white rounded-3xl p-6 shadow-[0_10px_0_-4px_rgba(28,25,23,0.35)] transition-[transform,box-shadow] duration-300 ease-out ${TILT} ${TILT_HOVER} md:hover:shadow-[-14px_22px_30px_rgba(28,25,23,0.45)] motion-reduce:transition-none motion-reduce:hover:transform-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-orange-500`}
+              className={`group relative flex flex-col min-h-[26rem] bg-stone-900 text-white rounded-3xl p-6 shadow-[0_10px_0_-4px_rgba(28,25,23,0.35)] transition-[transform,box-shadow] duration-300 ease-out ${TILT} ${TILT_HOVER} md:hover:shadow-[-14px_22px_30px_rgba(28,25,23,0.45)] motion-reduce:transition-none motion-reduce:hover:transform-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#F8EBDD]`}
             >
               {/* Arrow badge: fills in on hover */}
               <span
