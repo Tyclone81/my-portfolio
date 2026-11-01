@@ -16,13 +16,14 @@ export const metadata: Metadata = {
   authors: [{ name: "Victor Ogero" }],
   icons: {
     icon: [
-      { url: "/icon.svg", type: "image/svg+xml" },
-      { url: "/favicon.ico", sizes: "any" },
+      { url: "/favicon.ico?v=2", sizes: "any" },
+      { url: "/icon.png?v=2", type: "image/png", sizes: "32x32" },
+      { url: "/icon.svg?v=2", type: "image/svg+xml" },
     ],
     apple: [
-      { url: "/icon.svg", type: "image/svg+xml" },
+      { url: "/apple-icon.png?v=2", sizes: "180x180", type: "image/png" },
     ],
-    shortcut: ["/icon.svg"],
+    shortcut: ["/favicon.ico?v=2"],
   },
   openGraph: {
     title: "Victor Ogero | Full-Stack & Systems Software Engineer",

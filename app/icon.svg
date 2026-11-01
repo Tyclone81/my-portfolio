@@ -1,24 +1,24 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
   <defs>
     <linearGradient id="voBrandGrad" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#F97316" />
       <stop offset="100%" stop-color="#EA580C" />
     </linearGradient>
   </defs>
-  <!-- Rounded container in the website's predominant warm orange -->
-  <rect width="512" height="512" rx="128" fill="url(#voBrandGrad)" />
-  <rect width="512" height="512" rx="128" fill="none" stroke="rgba(255, 255, 255, 0.2)" stroke-width="14" />
+  <!-- Rounded container in the website's brand orange gradient -->
+  <rect width="512" height="512" rx="140" fill="url(#voBrandGrad)" />
+  <rect width="512" height="512" rx="140" fill="none" stroke="rgba(255, 255, 255, 0.2)" stroke-width="12" />
   
-  <!-- Monogram VO. in cream with golden dot -->
+  <!-- Monogram VO. in cream with amber dot -->
   <text
-    x="256"
-    y="282"
+    x="244"
+    y="286"
     text-anchor="middle"
     dominant-baseline="central"
     font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif"
     font-weight="900"
-    font-size="240"
-    letter-spacing="-12"
+    font-size="235"
+    letter-spacing="-14"
     fill="#FAF7F2"
-  >VO<tspan fill="#FED7AA" font-weight="900">.</tspan></text>
+  >VO<tspan fill="#FDE68A" font-weight="900" dx="6">.</tspan></text>
 </svg>
