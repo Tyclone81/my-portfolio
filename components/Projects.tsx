@@ -59,6 +59,7 @@ export default function Projects() {
 
 
 
+
                     {project.title}
                   </h3>
                   <span className="hidden sm:inline-block shrink-0 px-2.5 py-0.5 rounded-full bg-orange-50 text-orange-700 border border-orange-200 font-mono text-xs font-semibold">

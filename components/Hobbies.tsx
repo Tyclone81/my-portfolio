@@ -15,7 +15,6 @@ interface Interest {
   label: string;
   photos: HobbyPhoto[];
   imageBackground: string;
-  landscapeLastPhoto?: boolean;
 }
 
 const interests: Interest[] = [
@@ -64,7 +63,6 @@ const interests: Interest[] = [
       }
     ],
     imageBackground: "bg-[#e8d5bf]",
-    landscapeLastPhoto: true,
   },
   {
     title: "Go touch water",
@@ -149,18 +147,14 @@ export default function Hobbies() {
               key={interest.title}
               className="group overflow-hidden rounded-3xl border border-stone-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-orange-300 hover:shadow-xl"
             >
-              <div className={`grid grid-cols-1 ${interest.photos.length > 1 ? "grid-cols-2" : ""}`}>
-                {interest.photos.map((photo, index) => (
+              <div className="grid grid-cols-1">
+                {interest.photos.slice(0, 1).map((photo, index) => (
                   <button
                     key={photo.src}
                     type="button"
                     onClick={() => openPhoto(interest.photos, index)}
-                    aria-label={`View full-size image: ${photo.alt}`}
-                    className={`group/photo relative w-full overflow-hidden ${interest.imageBackground} ${
-                      interest.landscapeLastPhoto && index === interest.photos.length - 1
-                        ? "col-span-2 aspect-[2.2/1]"
-                        : "aspect-[4/3]"
-                    } focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-orange-500`}
+                    aria-label={`Open photo gallery: ${photo.alt}${interest.photos.length > 1 ? `, ${interest.photos.length} photos` : ""}`}
+                    className={`group/photo relative aspect-[4/3] w-full overflow-hidden ${interest.imageBackground} focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-orange-500`}
                   >
                     <Image
                       src={photo.src}
@@ -169,8 +163,10 @@ export default function Hobbies() {
                       sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                       className="object-cover transition-transform duration-500 group-hover/photo:scale-105"
                     />
-                    <span className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-stone-950/75 to-transparent px-4 pb-3 pt-8 text-left text-xs font-medium text-white opacity-0 transition-opacity group-hover/photo:opacity-100 group-focus-visible/photo:opacity-100">
-                      Click to view full size
+                    <span className="absolute bottom-3 right-3 rounded-full bg-stone-950/70 px-3 py-1.5 text-xs font-medium text-white backdrop-blur-sm">
+                      {interest.photos.length > 1
+                        ? `View gallery · ${interest.photos.length} photos`
+                        : "View full size"}
                     </span>
                   </button>
                 ))}
