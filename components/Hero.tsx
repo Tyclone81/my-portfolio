@@ -307,7 +307,7 @@ export default function Hero() {
             href="#projects"
             className="group flex items-center gap-1.5 pb-1 border-b-2 border-stone-900 hover:border-amber-700 hover:text-amber-800 transition-all font-bold"
           >
-            <span>latest work</span>
+            <span>selected work</span>
             <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
           </a>
 
@@ -315,7 +315,7 @@ export default function Hero() {
             href="#articles"
             className="group flex items-center gap-1.5 pb-1 border-b-2 border-stone-900 hover:border-amber-700 hover:text-amber-800 transition-all font-bold"
           >
-            <span>case studies &amp; articles</span>
+            <span>articles</span>
             <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
           </a>
 
