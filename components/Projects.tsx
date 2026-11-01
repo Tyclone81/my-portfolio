@@ -19,7 +19,7 @@ export default function Projects() {
             Featured Developments
           </h2>
           <p className="text-stone-600 mt-3 text-base">
-            Scroll through the stack. Open any card for the full case study.
+            Scroll through the stack, then browse the full case studies.
           </p>
           <div className="mt-4">
             <Link
@@ -38,7 +38,7 @@ export default function Projects() {
           {projects.map((project, i) => (
             <Link
               key={project.slug}
-              href={`/work#${project.slug}`}
+              href="/work"
               style={{
                 top: `calc(5.25rem + ${i * 3.25}rem)`,
                 zIndex: i + 1,
